@@ -33,27 +33,56 @@ public class Author {
 		return seq;
 	}
 
+	public void setSeq(int seq) {
+		this.seq = seq;
+	}
+
 	public long getAuthid() {
 		return authid;
+	}
+
+	public void setAuthid(long authid) {
+		this.authid = authid;
 	}
 
 	public String getAuthname() {
 		return authname;
 	}
 
+	public void setAuthname(String authname) {
+		this.authname = authname;
+	}
+
 	public String getSurname() {
 		return surname;
+	}
+
+	public void setSurname(String surname) {
+		this.surname = surname;
 	}
 
 	public String getGivenName() {
 		return givenName;
 	}
 
+	public void setGivenName(String givenName) {
+		this.givenName = givenName;
+	}
+
 	public String getInitials() {
 		return initials;
 	}
 
-	public Set<Integer> getAfidSet() {
+	public void setInitials(String initials) {
+		this.initials = initials;
+	}
+
+	public Set<Integer> getAfids() {
 		return afids;
 	}
+
+	public void setAfids(Set<Integer> afids) {
+		this.afids = afids;
+	}
+
 }

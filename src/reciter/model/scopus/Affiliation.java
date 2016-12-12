@@ -11,7 +11,7 @@ public class Affiliation {
 	private String affilname; // <affilname> XML tag.
 	private String affiliationCity; // <affiliation-city> XML tag.
 	private String affiliationCountry; // <affiliation-country> XML tag.
-	
+
 	public Affiliation() {}
 	
 	public Affiliation(int afid, String affilname, String affiliationCity, String affiliationCountry) {
@@ -25,15 +25,32 @@ public class Affiliation {
 		return afid;
 	}
 
+	public void setAfid(int afid) {
+		this.afid = afid;
+	}
+
 	public String getAffilname() {
 		return affilname;
 	}
-	
+
+	public void setAffilname(String affilname) {
+		this.affilname = affilname;
+	}
+
 	public String getAffiliationCity() {
 		return affiliationCity;
+	}
+
+	public void setAffiliationCity(String affiliationCity) {
+		this.affiliationCity = affiliationCity;
 	}
 
 	public String getAffiliationCountry() {
 		return affiliationCountry;
 	}
+
+	public void setAffiliationCountry(String affiliationCountry) {
+		this.affiliationCountry = affiliationCountry;
+	}
+	
 }

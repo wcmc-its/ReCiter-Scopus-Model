@@ -8,13 +8,15 @@ import java.util.Set;
  *
  */
 public class Author {
-	private final int seq; // <author seq="1"> tag.
-	private final long authid; // <authid> tag.
-	private final String authname; // <authname> tag.
-	private final String surname; // <surname> tag.
-	private final String givenName; // <given-name> tag.
-	private final String initials; // <initials> tag.
-	private final Set<Integer> afids; // <afid> tag. Using a set because duplicates are not allowed.
+	private int seq; // <author seq="1"> tag.
+	private long authid; // <authid> tag.
+	private String authname; // <authname> tag.
+	private String surname; // <surname> tag.
+	private String givenName; // <given-name> tag.
+	private String initials; // <initials> tag.
+	private Set<Integer> afids; // <afid> tag. Using a set because duplicates are not allowed.
+	
+	public Author() {}
 	
 	public Author(int seq, long authid, String authname, String surname,
 			String givenName, String initials, Set<Integer> afids) {

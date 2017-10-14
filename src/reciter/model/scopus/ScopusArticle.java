@@ -31,4 +31,5 @@ public class ScopusArticle {
 	private long pubmedId;
 	private List<Affiliation> affiliations;
 	private List<Author> authors;
+	private String doi;
 }

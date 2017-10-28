@@ -6,7 +6,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.Set;
+import java.util.List;
 
 /**
  * A class model representing a Scopus article author XML tag.
@@ -25,5 +25,5 @@ public class Author {
 	private String surname; // <surname> tag.
 	private String givenName; // <given-name> tag.
 	private String initials; // <initials> tag.
-	private Set<Integer> afids; // <afid> tag. Using a set because duplicates are not allowed.
+	private List<Integer> afids; // <afid> tag. Using a set because duplicates are not allowed.
 }

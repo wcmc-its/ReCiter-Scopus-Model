@@ -2,9 +2,7 @@ package reciter.model.scopus;
 
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBDocument;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 /**
  * A class model for a Scopus article affiliation XML tag.
@@ -16,6 +14,8 @@ import lombok.Setter;
 @Setter
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @DynamoDBDocument
+@NoArgsConstructor
+@AllArgsConstructor
 public class Affiliation {
 
 	private int afid; // <afid> XML tag.

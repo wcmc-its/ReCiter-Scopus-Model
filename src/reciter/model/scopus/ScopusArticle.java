@@ -27,9 +27,22 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ScopusArticle {
-
+	
+	private long scopusDocId;
 	private long pubmedId;
+	private String doi;
+	private String title;
+	private String publicationName;
+	private String coverDate;
+	private String coverDisplayDate;
+	private String issn;
+	private String eIssn;
+	private String volume;
+	private String issueIdentifier;
+	private String pageRange;
+	private String subType;
+	private String subTypeDescription;
+	private long citedByCount;
 	private List<Affiliation> affiliations;
 	private List<Author> authors;
-	private String doi;
 }

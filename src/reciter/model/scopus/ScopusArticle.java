@@ -28,7 +28,7 @@ import java.util.List;
 @AllArgsConstructor
 public class ScopusArticle {
 	
-	private long scopusDocId;
+	private String scopusDocId;
 	private long pubmedId;
 	private String doi;
 	private String title;

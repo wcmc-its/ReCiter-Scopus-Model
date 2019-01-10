@@ -9,13 +9,10 @@ import java.util.List;
 /**
  * A class model for representing a Scopus XML article.
  * A ScopusArticle consists of a map of afids to affiliations.
- * <p>
  * Note:
  * Sometimes scopus articles contains duplicate affiliation information.
  * However, this problem is resolved by using a map to store only distinct affiliation based on afid.
- * </p>
- *
- * @author jil3004
+ * @author jil3004, Sarbajit Dutta(szd2013)
  */
 @Builder
 @Getter

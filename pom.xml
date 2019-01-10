@@ -30,9 +30,9 @@
 	</developers>
     
     <scm>
-		<connection>scm:git:git://github.com/wcmc-its/ReCiter-PubMed-Model.git</connection>
-		<developerConnection>scm:git:git@github.com:wcmc-its/ReCiter-PubMed-Model.git</developerConnection>
-		<url>https://github.com/wcmc-its/ReCiter-Identity-Model</url>
+		<connection>scm:git:git://github.com/wcmc-its/ReCiter-Scopus-Model.git</connection>
+		<developerConnection>scm:git:git@github.com:wcmc-its/ReCiter-Scopus-Model.git</developerConnection>
+		<url>https://github.com/wcmc-its/ReCiter-Scopus-Model</url>
 		<tag>2.0.1-SNAPSHOT</tag>
 	</scm>
     

@@ -8,8 +8,9 @@ public class ScopusQuery {
 
     public ScopusQuery() {}
 
-    public ScopusQuery(List<Object> query) {
+    public ScopusQuery(List<Object> query, String type) {
         this.query = query;
+        this.type = type;
     }
     public List<Object> getQuery() {
         return query;

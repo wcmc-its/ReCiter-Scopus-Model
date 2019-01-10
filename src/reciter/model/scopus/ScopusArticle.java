@@ -8,8 +8,6 @@ import java.util.List;
 
 /**
  * A class model for representing a Scopus XML article.
- * <p>
- * <p>
  * A ScopusArticle consists of a map of afids to affiliations.
  * <p>
  * Note:

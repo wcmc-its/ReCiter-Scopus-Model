@@ -13,3 +13,87 @@ A model representation of a Scopus article
 [![fork this repo](http://githubbadges.com/fork.svg?user=wcmc-its&repo=ReCiter-Scopus-Model&style=flat)](https://github.com/wcmc-its/ReCiter-Scopus-Model/fork)
 [![Github All Releases](https://img.shields.io/github/downloads/wcmc-its/ReCiter-Scopus-Model/total.svg)]()
 [![Open Source Love](https://badges.frapsoft.com/os/v3/open-source.svg?v=102)](https://github.com/wcmc-its/ReCiter-Scopus-Model/) 
+
+
+
+## Data model
+
+The following is a sample record from DynamoDB for the ScopusArticle table.
+```
+{
+  "id": "16162764",
+  "scopusarticle": {
+    "affiliations": [
+      {
+        "affiliationCity": "Pittsburgh",
+        "affiliationCountry": "United States",
+        "affilname": "University of Pittsburgh",
+        "afid": 60015543
+      },
+      {
+        "affiliationCity": "Lausanne",
+        "affiliationCountry": "United States",
+        "affilname": "VA Medical Center",
+        "afid": 60014232
+      },
+      {
+        "affiliationCity": "Lausanne",
+        "affiliationCountry": "Switzerland",
+        "affilname": "Universitat Lausanne Schweiz",
+        "afid": 60000239
+      }
+    ],
+    "authors": [
+      {
+        "afids": [
+          60015543,
+          60014232
+        ],
+        "authid": 6602653322,
+        "authname": "Aujesky D.",
+        "givenName": "Drahomir",
+        "initials": "D.",
+        "seq": 1,
+        "surname": "Aujesky"
+      },
+      {
+        "afids": [
+          60015543
+        ],
+        "authid": 55257719500,
+        "authname": "Smith K.",
+        "givenName": "Kenneth J.",
+        "initials": "K.J.",
+        "seq": 2,
+        "surname": "Smith"
+      },
+      {
+        "afids": [
+          60000239
+        ],
+        "authid": 7006656677,
+        "authname": "Cornuz J.",
+        "givenName": "Jacques",
+        "initials": "J.",
+        "seq": 3,
+        "surname": "Cornuz"
+      },
+      {
+        "afids": [
+          60015543
+        ],
+        "authid": 7404029525,
+        "authname": "Roberts M.",
+        "givenName": "Mark S.",
+        "initials": "M.S.",
+        "seq": 4,
+        "surname": "Roberts"
+      }
+    ],
+    "doi": "10.1378/chest.128.3.1601",
+    "pubmedId": 16162764
+  }
+}
+
+```
+

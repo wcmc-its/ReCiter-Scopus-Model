@@ -57,6 +57,8 @@
 		<version.maven-javadoc-plugin>2.10.4</version.maven-javadoc-plugin>
 		<version.maven-scm-provider-gitexe>1.9.5</version.maven-scm-provider-gitexe>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>17</java.version>
+        <corretto.version>17</corretto.version>
     </properties>
     <build>
         <sourceDirectory>src</sourceDirectory>
@@ -64,10 +66,10 @@
 	        <plugins>
 	            <plugin>
 	                <artifactId>maven-compiler-plugin</artifactId>
-	                <version>3.3</version>
+	                <version>3.10.1</version>
 	                <configuration>
-	                    <source />
-	                    <target />
+	                    <source>${java.version}</source>
+                    	<target>${java.version}</target>
 	                </configuration>
 	            </plugin>
 	            <plugin>
@@ -177,13 +179,8 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.16.16</version>
+            <version>1.18.32</version>
             <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.amazonaws</groupId>
-            <artifactId>aws-java-sdk-dynamodb</artifactId>
-            <version>1.11.34</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/io.swagger/swagger-codegen-maven-plugin -->
         <dependency>
@@ -197,6 +194,16 @@
             <artifactId>gson</artifactId>
             <version>2.8.5</version>
         </dependency>
+        <dependency>
+			<groupId>software.amazon.awssdk</groupId>
+			<artifactId>dynamodb</artifactId>
+			<version>2.29.26</version>
+		</dependency>
+		<dependency>
+			<groupId>software.amazon.awssdk</groupId>
+			<artifactId>dynamodb-enhanced</artifactId>
+			<version>2.29.26</version>
+		</dependency>
     </dependencies>
     
     <profiles>

@@ -144,12 +144,12 @@
 					</configuration>
 				</plugin>
 	            <plugin>
-	                <groupId>io.swagger</groupId>
-	                <artifactId>swagger-codegen-maven-plugin</artifactId>
-	                <version>3.0.0-rc1</version>
+	                <groupId>org.openapitools</groupId>
+	                <artifactId>openapi-generator-maven-plugin</artifactId>
+	                <version>7.3.0</version>
 	                <executions>
 	                    <execution>
-	                        <id>generate-swagger-javaclient</id>
+	                        <id>generate-spring-java-client</id>
 	                        <phase>generate-sources</phase>
 	                        <goals>
 	                            <goal>generate</goal>
@@ -182,13 +182,6 @@
             <version>1.18.32</version>
             <scope>provided</scope>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/io.swagger/swagger-codegen-maven-plugin -->
-        <dependency>
-            <groupId>io.swagger</groupId>
-            <artifactId>swagger-codegen-maven-plugin</artifactId>
-            <version>3.0.0-rc1</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>

@@ -31,6 +31,7 @@ import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean;
 
 /**
  * A class model representing a Scopus article author XML tag.
+ * @author jil3004
  * @author ved4006
  *
  */

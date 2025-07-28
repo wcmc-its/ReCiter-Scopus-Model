@@ -35,7 +35,7 @@ import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean;
  * Note:
  * Sometimes scopus articles contains duplicate affiliation information.
  * However, this problem is resolved by using a map to store only distinct affiliation based on afid.
- * @author jil3004, Sarbajit Dutta(szd2013)
+ * @author jil3004, Sarbajit Dutta(szd2013) ,@author ved4006
  */
 @Builder
 @Getter

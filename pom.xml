@@ -21,6 +21,13 @@
 
 	<developers>
 		<developer>
+			<name>Mahender Reddy Jangari</name>
+			<email>mrj4001@med.cornell.edu</email>
+			<organization>Weill Cornell Medicine ITS</organization>
+			<organizationUrl>https://github.com/wcmc-its</organizationUrl>
+			<timezone>GMT+5.5</timezone>
+		</developer>
+		<developer>
 			<name>Sarbajit Dutta</name>
 			<email>szd2013@med.cornell.edu</email>
 			<organization>Weill Cornell Medicine ITS</organization>
@@ -33,19 +40,20 @@
 		<connection>scm:git:git://github.com/wcmc-its/ReCiter-Scopus-Model.git</connection>
 		<developerConnection>scm:git:git@github.com:wcmc-its/ReCiter-Scopus-Model.git</developerConnection>
 		<url>https://github.com/wcmc-its/ReCiter-Scopus-Model</url>
-		<tag>2.0.1-SNAPSHOT</tag>
+		<tag>3.0.0</tag>
 	</scm>
     
-    <distributionManagement>
-		<snapshotRepository>
-			<id>ossrh</id>
-			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
-		</snapshotRepository>
-		<repository>
-			<id>ossrh</id>
-			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-		</repository>
-	</distributionManagement>
+   <distributionManagement>
+    <repositories>
+	  <repository>
+		<id>ossrh-snapshots</id>
+		<url>https://s01.oss.sonatype.org/content/repositories/snapshots/</url>
+		<snapshots>
+		  <enabled>true</enabled>
+		</snapshots>
+	  </repository>
+	</repositories>
+  </distributionManagement>
 	
     <properties>
         <yaml.file>${project.basedir}/model-schema/pubmed-model.yaml</yaml.file>
@@ -62,6 +70,49 @@
     </properties>
     <build>
         <sourceDirectory>src</sourceDirectory>
+		 <plugins>
+			<!-- Apply the plugin directly here -->
+			<plugin>
+			  <groupId>org.sonatype.central</groupId>
+			  <artifactId>central-publishing-maven-plugin</artifactId>
+			  <version>0.8.0</version>
+			  <extensions>true</extensions>
+			  <configuration>
+				<publishingServerId>central</publishingServerId>
+			  </configuration>
+			</plugin>
+			<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-source-plugin</artifactId>
+					<version>${version.maven-source-plugin}</version>
+					<executions>
+					<execution>
+					<id>attach-sources</id>
+					<phase>package</phase>
+					<goals>
+					<goal>jar</goal>
+					</goals>
+					</execution>
+					</executions>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-javadoc-plugin</artifactId>
+					<version>${version.maven-javadoc-plugin}</version>
+					<configuration>
+						<encoding>UTF-8</encoding>
+					</configuration>
+					<executions>
+						<execution>
+							<id>attach-javadoc</id>
+							<phase>package</phase> 
+							<goals>
+								<goal>jar</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+		 </plugins>  
         <pluginManagement>
 	        <plugins>
 	            <plugin>

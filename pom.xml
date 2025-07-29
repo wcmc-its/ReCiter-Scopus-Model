@@ -44,31 +44,45 @@
 	</scm>
     
    <distributionManagement>
-    <repositories>
-	  <repository>
-		<id>ossrh-snapshots</id>
-		<url>https://s01.oss.sonatype.org/content/repositories/snapshots/</url>
-		<snapshots>
-		  <enabled>true</enabled>
-		</snapshots>
-	  </repository>
-	</repositories>
-  </distributionManagement>
+		<snapshotRepository>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+		</snapshotRepository>
+		<repository>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+		</repository>
+	</distributionManagement>
 	
     <properties>
         <yaml.file>${project.basedir}/model-schema/pubmed-model.yaml</yaml.file>
         <generated-sources-path>${project.build.directory}/generated-sources</generated-sources-path>
         <generated-sources-java-path>main/java</generated-sources-java-path>
         <version.maven-release-plugin>2.5.3</version.maven-release-plugin>
-        <version.maven-gpg-plugin>1.6</version.maven-gpg-plugin>
-        <version.maven-source-plugin>3.0.1</version.maven-source-plugin>
-		<version.maven-javadoc-plugin>2.10.4</version.maven-javadoc-plugin>
+        <version.maven-gpg-plugin>3.1.0</version.maven-gpg-plugin>
+        <version.maven-source-plugin>3.2.1</version.maven-source-plugin>
+		<version.maven-javadoc-plugin>3.6.3</version.maven-javadoc-plugin>
 		<version.maven-scm-provider-gitexe>1.9.5</version.maven-scm-provider-gitexe>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>17</java.version>
         <corretto.version>17</corretto.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
-    <build>
+	<repositories>
+    <repository>
+      <id>sonatype-public</id>
+      <url>https://s01.oss.sonatype.org/content/groups/public/</url>
+    </repository>
+  </repositories>
+
+  <pluginRepositories>
+    <pluginRepository>
+      <id>sonatype-plugins</id>
+      <url>https://s01.oss.sonatype.org/content/groups/public/</url>
+    </pluginRepository>
+  </pluginRepositories>			
+	<build>
         <sourceDirectory>src</sourceDirectory>
 		 <plugins>
 			<!-- Apply the plugin directly here -->
@@ -101,6 +115,9 @@
 					<version>${version.maven-javadoc-plugin}</version>
 					<configuration>
 						<encoding>UTF-8</encoding>
+						<links>
+							<link>https://docs.oracle.com/en/java/javase/17/docs/api/</link>
+						</links>
 					</configuration>
 					<executions>
 						<execution>
@@ -119,6 +136,7 @@
 	                <artifactId>maven-compiler-plugin</artifactId>
 	                <version>3.10.1</version>
 	                <configuration>
+						<encoding>UTF-8</encoding>					   
 	                    <source>${java.version}</source>
                     	<target>${java.version}</target>
 	                </configuration>
@@ -195,12 +213,12 @@
 					</configuration>
 				</plugin>
 	            <plugin>
-	                <groupId>org.openapitools</groupId>
-	                <artifactId>openapi-generator-maven-plugin</artifactId>
-	                <version>7.3.0</version>
+	                <groupId>io.swagger</groupId>
+	                <artifactId>swagger-codegen-maven-plugin</artifactId>
+	                <version>3.0.0-rc1</version>
 	                <executions>
 	                    <execution>
-	                        <id>generate-spring-java-client</id>
+	                        <id>generate-swagger-javaclient</id>
 	                        <phase>generate-sources</phase>
 	                        <goals>
 	                            <goal>generate</goal>

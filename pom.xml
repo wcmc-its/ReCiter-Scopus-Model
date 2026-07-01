@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>edu.cornell.weill.reciter</groupId>
   <artifactId>reciter-scopus-model</artifactId>
-  <version>3.0.0</version>
+  <version>3.0.1</version>
   <name>ReCiter-Scopus-Model</name>
   <description>A model representation of a Scopus article</description>
   <url>https://github.com/wcmc-its/ReCiter-Scopus-Model</url>
@@ -40,7 +40,7 @@
 		<connection>scm:git:git://github.com/wcmc-its/ReCiter-Scopus-Model.git</connection>
 		<developerConnection>scm:git:git@github.com:wcmc-its/ReCiter-Scopus-Model.git</developerConnection>
 		<url>https://github.com/wcmc-its/ReCiter-Scopus-Model</url>
-		<tag>3.0.0</tag>
+		<tag>3.0.1</tag>
 	</scm>
     
    <distributionManagement>

@@ -34,6 +34,13 @@
 			<organizationUrl>https://github.com/wcmc-its</organizationUrl>
 			<timezone>GMT-5</timezone>
 		</developer>
+		<developer>
+			<name>Veerraju Duppalapudi</name>
+			<email>ved4006@med.cornell.edu</email>
+			<organization>Weill Cornell Medicine ITS</organization>
+			<organizationUrl>https://github.com/wcmc-its</organizationUrl>
+			<timezone>GMT+5.5</timezone>
+		</developer>
 	</developers>
     
     <scm>

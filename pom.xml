@@ -72,7 +72,7 @@
 			<plugin>
 				<groupId>org.sonatype.central</groupId>
 				<artifactId>central-publishing-maven-plugin</artifactId>
-				<version>0.8.0</version>
+				<version>0.11.0</version>
 				<extensions>true</extensions>
 				<configuration>
 					<publishingServerId>central</publishingServerId>
@@ -117,7 +117,7 @@
 			<plugins>
 				<plugin>
 					<artifactId>maven-compiler-plugin</artifactId>
-					<version>3.13.0</version>
+					<version>3.16.0</version>
 					<configuration>
 						<encoding>UTF-8</encoding>
 						<release>${java.version}</release>
@@ -132,7 +132,7 @@
 				</plugin>
 				<plugin>
 					<artifactId>maven-deploy-plugin</artifactId>
-					<version>3.1.3</version>
+					<version>3.2.0</version>
 					<executions>
 						<execution>
 							<id>default-deploy</id>
